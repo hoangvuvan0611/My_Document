@@ -1,0 +1,5 @@
+12/02/2025
+*Kiểm tra xem container trên docker đang chạy trên server có thể truy cập được từ mạng bên ngoài hay không
+Các bước thực hiện: 
+- Kiểm tra port mà container đang lắng nghe
+```docker ps```  -   Show danh sách container đang chạy

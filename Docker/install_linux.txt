@@ -1,0 +1,29 @@
+- update all package: sudo apt update
+
+- Cài ??t các gói c?n thi?t ?? cài ??t Docker t? APT: 
+sudo apt install -y \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+
+- Thêm GPG key c?a Docker vào h? th?ng: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+- Thêm Docker repository vào danh sách source c?a APT: 
+echo \
+  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+- C?p nh?t l?i gói danh sách: sudo apt update
+
+- Cài ??t Docker Engine: sudo apt install -y docker-ce docker-ce-cli containerd.io
+
+- check docker version: sudo docker --version
+
+- Pull project t? Docker Hub: sudo docker pull <tên_project>
+
+- run: sudo docker run <tên_project>
+
+
+
