@@ -133,3 +133,18 @@ vd: docker network inspect my-network
 -> Kết nối một container vào một network đã tạo
 vd: docker network connect [my_network] [my_container]
 
+- docker network rm [my-network]
+-> xóa một hoặc nhiều network không còn sử dụng
+
+- docker network prune
+-> Xóa tất cả các network không còn dùng đến để giải phòng tài nguyên
+
+
+
+*** Quản lý Volume: Volume giúp lưu trữ và chia sẻ dữ liệu giữa container và host, đặc biệt quan trọng khi container bị xóa thì dữ liệu không bị mất
+
+- docker volume create 
+-> Tạo volume mới 
+vd: docker volume create [my-volume]
+
+- 
